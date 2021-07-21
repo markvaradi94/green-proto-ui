@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h2 class="ion-padding-start">Restaurants</h2>
+  <ion-list>
+    <ion-item button detail lines="inset" *ngFor="let restaurant of restaurants" (click)="openDetails(restaurant)">
+      {{ restaurant.name }}
+    </ion-item>
+  </ion-list>
+</ion-content>
